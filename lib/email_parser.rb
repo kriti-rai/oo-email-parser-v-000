@@ -10,8 +10,16 @@ class EmailParser
   end
 
   def parse
-   @emails.delete!(",")
-   @emails.split(" ").uniq
-  end
+   emails_array = []
+   @emails.split.collect do |email|
+     emails_array << email.split(",")
+   end 
+    emails_array.flatten.uniq
+	end
+
+  # def parse
+  #  @emails.delete!(",")
+  #  @emails.split(" ").uniq
+  # end
 
 end
