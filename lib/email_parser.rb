@@ -4,11 +4,6 @@
 # or whitespace (' ').
 class EmailParser
   attr_accessor :emails
-  @@email_list = []
-
-  def self.all
-    @@email_list
-  end
 
   def initialize(emails)
     @emails = emails
